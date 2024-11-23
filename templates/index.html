@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anime Ranking Game</title>
+</head>
+<body>
+    <h1>Which Anime Has a Better Rank?</h1>
+    <form method="POST" action="/result">
+        <div>
+            <h2>{{ anime1.title }}</h2>
+            <img src="{{ anime1.image_url }}" alt="{{ anime1.title }}" style="max-width: 300px;">
+            <button type="submit" name="selected" value="anime1">Choose</button>
+            <input type="hidden" name="anime1_rank" value="{{ anime1.rank }}">
+        </div>
+        <div>
+            <h2>{{ anime2.title }}</h2>
+            <img src="{{ anime2.image_url }}" alt="{{ anime2.title }}" style="max-width: 300px;">
+            <button type="submit" name="selected" value="anime2">Choose</button>
+            <input type="hidden" name="anime2_rank" value="{{ anime2.rank }}">
+        </div>
+        <input type="hidden" name="anime2_rank" value="{{ anime2.rank }}">
+    </form>
+</body>
+</html>
+
